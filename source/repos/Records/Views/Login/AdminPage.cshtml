@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "AdminPage";
+}
+@{
+    TempData.Keep("a");
+}
+<p id="a"><h2>AdminPage</h2></p>
+<style>
+    #a {
+        background-color: yellow;
+        text-align: center;
+    }
+
+    #b {
+        background-color: darkorange;
+        text-align: center;
+    }
+</style>
+<div>
+
+    <p id="b"><h3> Welcome @TempData["a"]</h3></p>
+</div>
+<div>
+
+    <table border="1" width="100%" height="50%">
+        <tr>
+            <th id="a">
+                @Html.ActionLink("User Details", "UserList")
+            </th>
+            <th id="b">
+                @Html.ActionLink("Dinner Details", "Display", "Primary")
+            </th>
+            <th id="a">
+                @Html.ActionLink("History", "Show", "History")
+            </th>
+            <th id="b">
+                @Html.ActionLink("Booking Details", "BookersList", "History")
+            </th>
+            <th id="a">
+                @Html.ActionLink("Map View", "AllMaps", "Primary")
+            </th>
+        </tr>
+
+
+    </table>
+
+</div>
+<div>
+    <div>
+        <p> User details displays the total no of users</p>
+    </div>
+</div>

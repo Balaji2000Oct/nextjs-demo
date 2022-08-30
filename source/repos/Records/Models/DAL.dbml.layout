@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DAL">
+  <DataContextMoniker Name="/DALDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f9e31f9f-b495-4bda-9b6d-1c33db58d6cd" absoluteBounds="2.25, 1.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DALDataContext/Client" />
+      <nestedChildShapes>
+        <elementListCompartment Id="618b05f7-e3a5-48a1-8978-b0be6a11259d" absoluteBounds="2.2649999999999997, 1.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

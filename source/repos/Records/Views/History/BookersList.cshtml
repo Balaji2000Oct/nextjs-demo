@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Records.Models.BookedUser>
+
+@{
+    ViewBag.Title = "BookersList";
+}
+
+<h2>BookersList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DinnerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DinnerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookedDate)
+        </td>
+        
+    </tr>
+}
+    @Html.ActionLink("back","AdminPage","Login")
+</table>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Records.Models.BookedUser>
+
+@{
+    ViewBag.Title = "DisplayBook";
+}
+
+@Html.Raw(TempData["CancelMsg"])
+<h2>DisplayBook</h2>
+
+@{
+    if (Model==null)
+    {
+        <h3>There is no more details of booking</h3>
+    }
+    else
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmailID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DinnerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookedDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmailID)
+                    </td>
+                    @{ 
+                        var Dd = Convert.ToString(item.DinnerName.TrimEnd());
+                    }
+                    <td>
+                        <a href="@Url.Action("Man","History",new { Name=Dd})"> @Html.DisplayFor(modelItem => item.DinnerName)</a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BookedDate)
+                    </td>
+                    <td>
+
+                        @Html.ActionLink("Cancel", "Delete", new { id = item.BookId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    }
+}
+

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "UserPage";
+}
+
+<h2>UserPage</h2>
+
+<div>
+
+    <h3> Welcome @TempData["a"]</h3>
+    @{
+        TempData.Keep("a");
+        var data = TempData["a"];
+        TempData.Keep("a");
+    }
+</div>
+
+<div>
+    <table width="100%" cellspacing="4">
+
+
+
+        <thead>
+            @Html.ActionLink("Dinner Details", "DisplayUser", "Primary")
+        </thead>
+    </table>
+</div>
+<a href="@Url.Action("DisplayBook","History", new { Name=data})"> Booking Details</a>
